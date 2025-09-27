@@ -1,0 +1,934 @@
+
+body{
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    box-sizing: border-box;
+    /* overflow: hidden; */
+    
+}
+*{
+    box-sizing: border-box;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+.container{
+    height: 100vh;
+    width: 100vw;
+   background-color: lightpink;
+   background-image: url("/Images/backgroundImage.jpg");
+   background-size: cover;
+   padding-top: 3px;
+   box-sizing: border-box;
+    
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 7vh;
+    width: 100%;
+    background-image: linear-gradient(to right, #76ec91, #91eae4);
+    border-radius: 10px;
+
+}
+.logo{
+    height: 4vh;
+    margin-left: 20px;
+}
+
+.pomodoro{
+  color: tomato;
+}
+
+.pomodoro:hover{
+  color: red;
+  font-size: 1.2em;
+}
+
+.pomodoroPopup{
+  display: none;
+  align-items: center;
+  justify-content: center;
+  height: 60%;
+  width: 50%;
+  z-index: 1;
+  right: 9rem; 
+  top:9rem; 
+  position: absolute;
+  background-color: #efdf2b;
+  border: 1px solid red;
+  border-bottom-left-radius: 35px;
+  border-bottom-right-radius: 35px;
+  border-top-left-radius: 35px;
+}
+
+
+
+.pomoAlign{
+  text-align: center;
+}
+
+.pomoAlign span{
+  display: none;
+  font-size: 10px;
+  color: red;
+  margin-top: 10px;
+}
+
+.closingMinus{
+  position: absolute;
+  font-size: 20px;
+  top: 20px;
+  right: 60px;
+  padding: 2px;
+  height: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.closingMinus:hover{
+  color: green;
+}
+
+
+.pomoXIcon{
+  display: flex;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  font-size: 20px;
+  color: #fff;
+  z-index: 1;
+}
+
+.pomoXIcon:hover{
+  color: red;
+}
+
+.pomodoroImg{
+  height: 300px;
+  width: 320px;
+}
+
+.NavContainer{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    height: 100%;
+    margin-right: 25px;
+    font-size: 1.5em;
+    color: #20262c;
+    cursor: pointer;
+}
+
+.pomoTimer{
+  font-size: 40px;
+  color: green;
+}
+
+.pomoStartBtn{
+  height: 30px;
+  width: 80px;
+  background-color: #5494de;
+  border: none;
+  border-radius: 10px;
+}
+
+.pomoResetBtn{
+  height: 30px;
+  width: 80px;
+  border: none;
+  border-radius: 10px;
+  background-color: transparent;
+  border: 1px solid #5494de;
+}
+
+.logoutBtn{
+    font-size: 15px;
+    background-color: tomato;
+    border-radius: 50px;
+    padding: 4px 8px;
+    /* margin-right: 10px;
+    margin-left: 20px; */
+}
+.logoutBtn:hover{
+    font-size: 13px;
+    background-color: red;
+}
+
+
+.logoutPopup{
+  display:none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 13rem;
+  right:25rem;
+  height: 230px;
+  width: 230px;
+  border: 1px, solid, yellowgreen;
+  background-image: radial-gradient(lightblue, lightpink) ;
+  z-index: 1;
+  border-radius: 20px;
+  cursor: auto;
+}
+
+.logoutPopup h3{
+  color: red;
+  text-align: center;
+}
+
+.logoutPopup span{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.logoutPopup span button {
+  margin: 10px;
+  height: 27px;
+  width: 60px;
+  border-radius: 10px;
+  border:none;
+  outline: none;
+  cursor: pointer;
+}
+
+.activeBtn{
+  background-color: #5494de;
+}
+
+.mainPage{
+    display: flex;
+    height: 93%;
+    width: 100%;
+    gap: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.leftNavbar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 90%;
+    width: 20vw;
+    background-color: #dadada;
+    border-radius: 20px;
+     margin-top: 5px; 
+}
+
+h5{
+    font-size: 15px;
+    align-self: flex-start;
+    margin-left: 5px;
+}
+.top{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+}
+.Profilecontainer{
+    height: 100px;
+    width:100px;
+    background-color: #ececd9;
+    border-radius: 60px;
+    border: .5px solid gray;
+    text-align: center;
+}
+.profile{
+    height: 99px;
+    width: 99px;
+    border-radius: 60px;
+}
+
+.editIcon{
+  position: absolute;
+  top: 210px;
+  left: 140px;
+  font-size: 12px;
+  border: 1px solid gray;
+  padding: 3px;
+  border-radius: 10px;
+  color: #5494de;
+  background-color: #fff;
+  transition: 0.3s;
+}
+
+.mainTodoContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 75px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.tagsContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 60rem;
+    box-sizing: border-box;
+  
+  }
+
+  .tagsList{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .tag{
+    text-align: center;
+    font-size: 18px;
+    font-family : "roboto";
+    padding: 5px;
+    color: #fff;
+    width: 100px;
+    border: 1px solid, green;
+    border-radius: 20px;
+  }
+
+.tag:hover{
+  font-size: 20px;
+  padding: 8px;
+  width: 110px;
+  
+}
+
+.active{
+  font-size: 20px;
+  padding: 8px;
+  width: 110px;
+  background-color: green;
+  border: 1px solid red;
+}
+
+.displayContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 85%;
+    width: 100%;
+    padding-top: 40px;
+    box-sizing: border-box;
+}
+
+.inputContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todoInput{
+    height: 30px;
+    color: #fff;
+    width: 300px;
+    border-radius: 10px;
+    border: 1.5px solid orange;
+    padding-left: 10px;
+    font-size: 16px;
+    outline: none;
+    align-self: center;
+    background-color: transparent;
+}
+
+::placeholder{
+  color: red;
+  opacity:.6 ;
+}
+
+.addButton{
+  position: relative;
+  left: -30px;
+    height: 30px;
+    width: 70px;
+    border-radius: 10px;
+    border: none;
+    margin-left: 10px;
+    background-color:orange;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    outline: none;
+}
+
+.addButton:hover{
+    background-color: darkorange;
+}
+
+/* --------------------------------------- todos ------------------------------------ */
+
+
+.listItem{
+  display: flex;
+  color: #fff;
+  align-items: center;
+  justify-content: space-between;
+  width: 800px;
+  height: 50px;
+  border-radius:20px;padding: 10px;
+  border: 1px solid lightseagreen;
+  list-style: none;
+  margin: 10px;
+}
+
+.listItem:hover{
+  background-color: antiquewhite;
+  color: black;
+}
+
+.todosList{
+  height: 60vh;
+  overflow: scroll;
+}
+
+.todosList::-webkit-scrollbar{
+  display: none;
+}
+
+.popUpContainer{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  position: absolute;
+  padding-top: 100px;
+  height: 70%;
+  width: 60%;
+  background-color: #fff;
+  border-radius:30px;
+border: 3px solid rgb(154, 215, 98);
+text-align: center;
+
+gap: 40px;
+}
+
+.popUpContainer::-webkit-scrollbar{
+  display: none;
+}
+.crossIcon{
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 30px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+
+
+.crossIcon:hover{
+  color: red;
+  font-size: 23px;
+}
+
+.timerCon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  width: 200px;
+  font-size: 30px;
+  border-radius: 100px;
+  border: 1px solid lightseagreen;
+  box-shadow: 0 0 10px lightseagreen;
+  margin-left: 20px; 
+}
+
+.historyList{
+  overflow: scroll;
+  margin-left: 10px;
+  margin-top: 20px;
+  align-self: flex-end;
+  height: 300px;
+  width: 500px;
+  overflow: scroll;
+  
+}
+.flexCon{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.alignCon{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  margin: 10px;
+}
+.historyList::-webkit-scrollbar{
+  display: none;
+}
+
+.historyList li{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid orange;
+  margin: 5px;
+  height: 30px;
+  text-align: center;
+  border-radius: 8px;
+  
+}
+
+.buttonsCon{
+  margin: 10px;
+  margin-left: 30px;
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.endBtn{
+  height: 30px;
+  width:65px;
+  border:1px solid red;
+  border-radius:10px;
+  color: red;
+}
+
+.pauseBtn{
+  height: 30px;
+  width:65px;
+  border:1px solid rgb(124, 124, 237);
+  border-radius:10px;
+  color: rgb(90, 94, 203);
+}
+
+.statusBtnGreen{
+  position: absolute;
+  bottom: 20px;
+  right: 30px;
+  height: 30px;
+  width:130px;
+  border:1px solid green;
+  border-radius:10px;
+  color: green;
+  background-color: transparent;
+  cursor: pointer;
+}
+.statusBtnGreen:hover{
+  background-color: green;
+  color: #fff;
+}
+.statusBtnYellow{
+  position: absolute;
+  bottom: 20px;
+  right: 30px;
+  height: 30px;
+  width:135px;
+  border:1px solid orange;
+  border-radius:10px;
+  color: orange;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+
+ /* ----------------fitness------------------ */
+
+.fitnessContainer{
+  display: none;
+  margin-top: 30px;
+}
+
+.cardsList{
+  display: flex;
+}
+
+.card {
+  width: 180px;
+  height: 190px;
+  border-radius: 30px;
+  margin: 30px;
+  background: #e0e0e0;
+  box-shadow: 5px 5px 40px #bebebe,
+             -5px -5px 30px #ffffff;
+  text-align: center;
+}
+
+
+
+.img{
+  height: 189px;
+  width: 179px;
+  border-radius: 30px;
+}
+
+.cardHeading{
+  font-size: 25px;
+  color: #fff;
+  margin-top: 0px;
+  
+}
+
+.yogaPopup{
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 12rem;
+  left:27rem;
+  height: 260px;
+  width: 700px;
+  background-color:#ffffffed;
+  border-radius: 30px;
+  margin: 0;
+  padding: 0;
+
+  transition-delay: 1s;
+}
+
+.yogaCard{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  height: 200px;
+  width: 200px;
+  margin: 30px;
+  cursor: pointer;
+}
+
+.suryanamaskarVideoCon{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  bottom: 50px;
+  left: .8rem;
+  display: none;
+  z-index: 1;
+}
+
+.yogaCard h1{
+  font-size: 20px;
+  color: darkorange;
+}
+
+.yogaImage{
+  height: 150px;
+  width: 165px;
+  border-radius: 20px;
+}
+
+.xIcon{
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 30px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.xIcon:hover{
+  color: red;
+}
+
+.videoXIcon{
+  display: flex;
+  position: absolute;
+  top: .5rem;
+  right: 4.5rem;
+  cursor: pointer;
+  font-size: 30px;
+  color: #fff;
+}
+
+.videoXIcon:hover{
+  color: red;
+}
+
+
+
+.asanasPopup{
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top:-2rem;
+  right: 0.01rem;
+  height: 460px;
+  width: 700px;
+  background-color:#ffffffed;
+  border-radius: 30px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  transition-delay: 1s;
+}
+
+.asanasPopup ul li span{
+  font-style: italic;
+  font-weight:bold ;
+}
+
+.asanamImage{
+  height: 200px;
+  width:200px;
+}
+
+.changeBtn{
+  position: absolute;
+  padding: 5px;
+  top: 13rem;
+  right: 3rem;
+  font-size: 20px;
+  color: #76ec91;
+   border-radius:5px ;
+}
+
+.changeBtn:hover{
+  
+  border:2px solid #76ec91;
+ 
+  
+}
+
+.asanaXIcon{
+   position: absolute;
+   top: 25px;
+   right: 35px;
+   font-size: 19px;
+}
+
+.asanaXIcon:hover{
+  color: red;
+}
+
+.meditationPopup{
+  display: none;
+  flex-direction: column;
+  height: 100%;
+  position: absolute;
+  top:8rem;
+  left: 26rem;
+  z-index: 1;
+}
+.meditationPopup p{
+  position: absolute;
+  top: 28rem;
+  color: blue;
+  font-size: 17px;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.mediVideoXIcon{
+  display: flex;
+  position: absolute;
+  top: .5rem;
+  right: 4.5rem;
+  cursor: pointer;
+  font-size: 30px;
+  color: #fff;
+  z-index: 1;
+}
+
+.mediVideoXIcon:hover{
+  color: red;
+}
+
+
+.pranayamaPopup{
+  display: none;
+  flex-direction: column;
+  height: 100%;
+  position: absolute;
+  top:8rem;
+  left: 26rem;
+  z-index: 1;
+}
+
+.pranayamaVideoXIcon{
+  display: flex;
+  position: absolute;
+  top: .5rem;
+  right: 4.5rem;
+  cursor: pointer;
+  font-size: 30px;
+  color: #fff;
+  z-index: 1;
+}
+
+.pranayamaVideoXIcon:hover{
+  color: red;
+}
+
+/*------------------funZone--------*/
+
+.funZoneContainer{
+  display: none;
+  flex-direction: column;
+  justify-content:flex-end;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  height:100%; 
+  width: 50%;
+  border: 1px solid green;
+} 
+
+.funZoneContainer h3{
+  text-align: center;
+  width: 50%;
+  color: yellow;
+  margin: 0;
+  padding: 0;
+  border: 1px solid green;
+
+}
+
+.gamesCardsContainer{
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  flex-wrap: wrap;
+  margin-top: 25px;
+  margin: 0;
+  padding: 0;
+}
+.gameCard{
+  padding: 10px;
+  height: 160px;
+  width: 250px;
+  background-color: #fff;
+  border-radius: 25px;
+  margin: 10px;
+ 
+}
+
+.longCon{
+   height: 20px;
+   width: 230px;
+   background-color: #e0e0e0;
+   border-radius:20px ;
+   opacity: .6;
+   margin-top: 20px;
+}
+.alignCards{
+  display: flex;
+  justify-content: space-between;
+  width: 92%;
+}
+
+.shortCon{
+  height: 20px;
+   width: 130px;
+   background-color: #e0e0e0;
+   border-radius:20px ;
+   opacity: .6;
+   margin-top: 20px;
+}
+
+.tinyCon{
+  height: 20px;
+   width: 50px;
+   background-color: #e0e0e0;
+   border-radius:20px ;
+   opacity: .6;
+   margin-top: 20px;
+}
+
+
+/*------------------ background switch ------------- */
+
+/* From Uiverse.io by juanpabl0svn */ 
+/* The switch - the box around the slider */
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 2.5em;
+  height: 1.2em;
+  cursor: pointer;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  --background: #20262c;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--background);
+  transition: 0.5s;
+  border-radius: 10px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1em;
+  width: 1em;
+  border-radius: 50%;
+  left: 10%;
+  bottom: 15%;
+  box-shadow: inset 8px -4px 0px 0px #ececd9, -4px 1px 4px 0px #dadada;
+  background: var(--background);
+  transition: 0.5s;
+}
+
+.decoration {
+  position: absolute;
+  content: "";
+  height: 1px;
+  width: 1px;
+  border-radius: 50%;
+  right: 10%;
+  top: 5%;
+  background: #e5f041e6;
+  backdrop-filter: blur(10px);
+  transition: all 0.5s;
+  box-shadow: -7px 10px 0 #e5f041e6, 8px 15px 0 #e5f041e6, -17px 1px 0 #e5f041e6, 
+     -20px 10px 0 #e5f041e6, -7px 23px 0 #e5f041e6, -15px 25px 0 #e5f041e6; 
+}
+
+input:checked ~ .decoration {
+  transform: translateX(-20px);
+  width: 10px;
+  height: 10px;
+  background: white;
+  box-shadow: -12px 0 0 white, -6px 0 0 1.6px white, 5px 15px 0 1px white,
+    1px 17px 0 white, 10px 17px 0 white;
+}
+
+input:checked + .slider {
+  background-color: #5494de;
+}
+
+input:checked + .slider:before {
+  transform: translateX(100%);
+  box-shadow: inset 15px -4px 0px 15px #efdf2b, 0 0 10px 0px #efdf2b;
+}

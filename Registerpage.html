@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registration from</title>
+    <link rel="styleSheet" href="/registration.css">
+</head>
+<body>
+    <div class="mainLoginPage">
+      <form class="form">
+    <p class="title">Register </p>
+    <p class="message1">Signup now and get full access to our app. </p>
+    <p class="message" id="statusMsg"></p>    
+    <div class="flex">
+        <label>
+            <input required="" placeholder="" id="firstname" type="text" class="input">
+            <span>Firstname</span>
+        </label>
+
+        <label>
+            <input required="" placeholder="" id="lastname" type="text" class="input">
+            <span>Lastname</span>
+        </label>
+    </div>  
+            
+    <label>
+        <input required="" placeholder="" type="email" id="email" class="input">
+        <span id="emailText" >Email</span>
+    </label> 
+        
+    <label>
+        <input required="" placeholder="" id="password" type="password" class="input">
+        <span>Password</span>
+    </label>
+    <span id="instructions">i</span>
+    <div id="instructionsCon">
+        <p>Password must be at least 8 characters long and include at least one uppercase letter, one lowercase letter, one number, and one special character.</p>
+    </div>
+    <label>
+        <input required="" placeholder="" type="password" id="confirmpassword" class="input">
+        <span>Confirm password</span>
+    </label>
+
+    <div>
+        <input type="checkbox" class="checkbox" id="showPassword"/>
+        <label for="showPassword" class="checkbox-label">Show Password</label>
+    </div>
+    <button class="submit" id="submitBtn">Submit</button>
+    <p class="signin">Already have an acount ? <a href="/loginPage.html">Signin</a> </p>
+</form>
+    </div>
+    <!-- From Uiverse.io by Yaya12085 --> 
+  <script src="/registration.js">
+
+  </script>
+</body>
+</html>
