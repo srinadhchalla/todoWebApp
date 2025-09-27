@@ -60,7 +60,7 @@ LoginBtnEle.addEventListener("click", function(event) {
             error.style.color = "green";
             error.textContent = "Login successful!";
             localStorage.setItem("loginStatus", "true")
-            window.location.href = "TodosPage.html";
+            window.location.href = "index.html";
         } else {
             error.style.display = "block";
             error.style.color = "red";
