@@ -173,11 +173,11 @@ logoutBtn.addEventListener("click", (e)=> {
 })
 
 
-let loginStatus = localStorage.getItem("loginStatus")
+// let loginStatus = localStorage.getItem("loginStatus")
 
-if(loginStatus === "false"){
-    window.location.href = "loginPage.html"
-}
+// if(loginStatus === "false"){
+//     window.location.href = "loginPage.html"
+// }
 
 
 fitnessLi.addEventListener("click" , () => {
