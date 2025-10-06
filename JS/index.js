@@ -155,7 +155,7 @@ closeBtn.onclick = function(){
 
 confirmBtn.onclick = function(){
     logoutPopup.style.display = "none"
-    window.location.href = "loginPage.html"
+    window.location.href = "loginpage.html"
     localStorage.setItem("loginStatus", "false")
 }
 
@@ -176,7 +176,7 @@ logoutBtn.addEventListener("click", (e)=> {
 let loginStatus = localStorage.getItem("loginStatus")
 
 if(loginStatus === "false"){
-    window.location.href = "loginPage.html"
+    window.location.href = "loginpage.html"
 }
 
 
