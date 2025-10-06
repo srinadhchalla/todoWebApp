@@ -155,7 +155,7 @@ closeBtn.onclick = function(){
 
 confirmBtn.onclick = function(){
     logoutPopup.style.display = "none"
-    window.location.href = "loginpage.html"
+    window.location.href = "loginPage.html"
     localStorage.setItem("loginStatus", "false")
 }
 
@@ -173,11 +173,11 @@ logoutBtn.addEventListener("click", (e)=> {
 })
 
 
-// let loginStatus = localStorage.getItem("loginStatus")
+let loginStatus = localStorage.getItem("loginStatus")
 
-// if(loginStatus === "false"){
-//     window.location.href = "loginPage.html"
-// }
+if(loginStatus === "false"){
+    window.location.href = "loginPage.html"
+}
 
 
 fitnessLi.addEventListener("click" , () => {
