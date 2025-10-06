@@ -73,6 +73,6 @@ LoginBtnEle.addEventListener("click", function(event) {
 let NewUser = document.getElementById("NewUser");
 
 NewUser.addEventListener("click", function() {
-    window.location.href = "registration.html";
+    window.location.href = "regestration.html";
 });
 
