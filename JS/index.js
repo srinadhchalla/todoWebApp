@@ -155,7 +155,7 @@ closeBtn.onclick = function(){
 
 confirmBtn.onclick = function(){
     logoutPopup.style.display = "none"
-    window.location.href = "loginPage.html"
+    window.location.href = "regestration.html"
     localStorage.setItem("loginStatus", "false")
 }
 
