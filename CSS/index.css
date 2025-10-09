@@ -17,7 +17,7 @@ body::-webkit-scrollbar {
     height: 100vh;
     width: 100vw;
    background-color: lightpink;
-   background-image: url("./Images/backgroundImage.jpg");
+   background-image: url("../Images/backgroundImage.jpg");
    background-size: cover;
    padding-top: 3px;
    box-sizing: border-box;
