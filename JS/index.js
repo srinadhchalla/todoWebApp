@@ -136,10 +136,10 @@ todoLi.addEventListener("click", () => {
     funLi.classList.remove("active");
 
     if (lightTheme) {
-        container.style.backgroundImage = "url('../Images/backgroundImage.jpg')"
+        container.style.backgroundImage = "url('Images/backgroundImage.jpg')"
     }
     else{
-        container.style.backgroundImage = "url('../Images/darkThemeImage.jpg')"
+        container.style.backgroundImage = "url('Images/darkThemeImage.jpg')"
     }
 })
 
