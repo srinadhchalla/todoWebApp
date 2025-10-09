@@ -209,7 +209,6 @@ userGreeting.textContent = `hi ${userName} welcome back!`
 fullName.textContent = surName + " " + userName
 
 
-container.style.backgroundImage = "url('Images/backgroundImage.jpg')"
 let lightTheme = true;
 themecheckbox.addEventListener('change', function() {
     if (this.checked) {
