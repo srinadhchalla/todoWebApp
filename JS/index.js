@@ -136,10 +136,10 @@ todoLi.addEventListener("click", () => {
     funLi.classList.remove("active");
 
     if (lightTheme) {
-        container.style.backgroundImage = "url('/Images/backgroundImage.jpg')"
+        container.style.backgroundImage = "url('Images/backgroundImage.jpg')"
     }
     else{
-        container.style.backgroundImage = "url('/Images/darkThemeImage.jpg')"
+        container.style.backgroundImage = "url('Images/darkThemeImage.jpg')"
     }
 })
 
@@ -214,10 +214,10 @@ let lightTheme = true;
 themecheckbox.addEventListener('change', function() {
     if (this.checked) {
         lightTheme = false;
-        container.style.backgroundImage = "url('/Images/darkThemeImage.jpg')"
+        container.style.backgroundImage = "url('Images/darkThemeImage.jpg')"
     }
     else{
-        container.style.backgroundImage = "url('/Images/backgroundImage.jpg')"
+        container.style.backgroundImage = "url('Images/backgroundImage.jpg')"
         
         lightTheme = true;
     }
