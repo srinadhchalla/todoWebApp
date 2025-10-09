@@ -75,4 +75,3 @@ let NewUser = document.getElementById("NewUser");
 NewUser.addEventListener("click", function() {
     window.location.href = "regestration.html";
 });
-

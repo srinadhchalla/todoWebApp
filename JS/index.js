@@ -136,10 +136,10 @@ todoLi.addEventListener("click", () => {
     funLi.classList.remove("active");
 
     if (lightTheme) {
-        container.style.backgroundImage = "url('/Images/backgroundImage.jpg')"
+        container.style.backgroundImage = "url('Images/backgroundImage.jpg')"
     }
     else{
-        container.style.backgroundImage = "url('/Images/darkThemeImage.jpg')"
+        container.style.backgroundImage = "url('Images/darkThemeImage.jpg')"
     }
 })
 
@@ -155,7 +155,7 @@ closeBtn.onclick = function(){
 
 confirmBtn.onclick = function(){
     logoutPopup.style.display = "none"
-    window.location.href = "loginPage.html"
+    window.location.href = "loginpage.html"
     localStorage.setItem("loginStatus", "false")
 }
 
@@ -176,7 +176,7 @@ logoutBtn.addEventListener("click", (e)=> {
 let loginStatus = localStorage.getItem("loginStatus")
 
 if(loginStatus === "false"){
-    window.location.href = "loginPage.html"
+    window.location.href = "loginpage.html"
 }
 
 
@@ -209,15 +209,14 @@ userGreeting.textContent = `hi ${userName} welcome back!`
 fullName.textContent = surName + " " + userName
 
 
-
 let lightTheme = true;
 themecheckbox.addEventListener('change', function() {
     if (this.checked) {
         lightTheme = false;
-        container.style.backgroundImage = "url('/Images/darkThemeImage.jpg')"
+        container.style.backgroundImage = "url('Images/darkThemeImage.jpg')"
     }
     else{
-        container.style.backgroundImage = "url('/Images/backgroundImage.jpg')"
+        container.style.backgroundImage = "url('Images/backgroundImage.jpg')"
         
         lightTheme = true;
     }
