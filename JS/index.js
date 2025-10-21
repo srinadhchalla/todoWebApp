@@ -432,7 +432,7 @@ function CreateAppendTodo(List){
     }
 
     listItem.appendChild(con)
-    let para = document.createElement("p")
+    let para = document.createElement("span")
     para.textContent = List.dateTime
     para.style.width= "45%"
     listItem.appendChild(para)

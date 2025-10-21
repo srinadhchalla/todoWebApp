@@ -226,6 +226,17 @@ nav{
      margin-top: 5px; 
 }
 
+.bottom{
+  font-size: 15px;
+  align-self: flex-start;
+}
+
+h2{
+    font-size: 20px;
+    align-self: flex-start;
+    margin-left: 15px;
+}
+
 h5{
     font-size: 15px;
     align-self: flex-start;
@@ -265,6 +276,22 @@ h5{
   transition: 0.3s;
 }
 
+
+.followIconsContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  height:2rem;
+  margin-top: 10px;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  margin-left:15px ;
+}
+
+
+
+/*----------------------------------------------*/
 .mainTodoContainer{
     display: flex;
     flex-direction: column;
@@ -336,6 +363,7 @@ h5{
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
 
 .todoInput{
@@ -788,7 +816,6 @@ gap: 40px;
   padding: 0;
   height:100%; 
   width: 50%;
-  border: 1px solid green;
 } 
 
 .funZoneContainer h3{
@@ -797,15 +824,15 @@ gap: 40px;
   color: yellow;
   margin: 0;
   padding: 0;
-  border: 1px solid green;
 
 }
 
 .gamesCardsContainer{
   display: flex;
   justify-content: center;
-  height: 100%;
-  width: 100%;
+  align-items: center;
+  height: 50rem;
+  width: 60rem;
   flex-wrap: wrap;
   margin-top: 25px;
   margin: 0;
@@ -862,8 +889,8 @@ gap: 40px;
   font-size: 17px;
   position: relative;
   display: inline-block;
-  width: 2.5em;
-  height: 1.2em;
+  width: 2em;
+  height: 1em;
   cursor: pointer;
 }
 
@@ -891,8 +918,8 @@ gap: 40px;
 .slider:before {
   position: absolute;
   content: "";
-  height: 1em;
-  width: 1em;
+  height: .7em;
+  width: .7em;
   border-radius: 50%;
   left: 10%;
   bottom: 15%;
@@ -904,8 +931,8 @@ gap: 40px;
 .decoration {
   position: absolute;
   content: "";
-  height: 1px;
-  width: 1px;
+  height: .5px;
+  width: .5px;
   border-radius: 50%;
   right: 10%;
   top: 5%;
@@ -918,8 +945,8 @@ gap: 40px;
 
 input:checked ~ .decoration {
   transform: translateX(-20px);
-  width: 10px;
-  height: 10px;
+  width: 5px;
+  height: 5px;
   background: white;
   box-shadow: -12px 0 0 white, -6px 0 0 1.6px white, 5px 15px 0 1px white,
     1px 17px 0 white, 10px 17px 0 white;
@@ -933,3 +960,181 @@ input:checked + .slider:before {
   transform: translateX(100%);
   box-shadow: inset 15px -4px 0px 15px #efdf2b, 0 0 10px 0px #efdf2b;
 }
+
+/* ------------------------------------------------- */
+  @media screen and (max-width: 768px) {
+    .mainPage{
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        width: 100%;
+    }
+    nav{
+      width: 100%;
+    }
+    .leftNavbar{
+      display: flex;
+        flex-direction: row;
+        align-self: center;
+        height: 10em;
+        width: 85%;
+        margin-bottom: 10px;
+        margin-left: 0;
+        padding-top: 10px;
+    }
+     .profileSection{
+      align-self: flex-start;
+      margin-left: 20px;
+     }
+    .Profilecontainer{
+        height: 50px;
+        width:50px;
+    }
+    .profile{
+        height: 49px;
+        width: 49px;
+    }
+
+   .editIcon{
+  position: absolute;
+  top: 180px;
+  left: 90px;
+  font-size: 6px;
+  border: 1px solid gray;
+  padding: 2px;
+  border-radius: 10px;
+  color: #5494de;
+  background-color: #fff;
+  transition: 0.3s;
+}
+
+.bottom{
+      display: none;
+    }
+    .logo{
+    height: 2vh;
+    margin-left: 10px;
+}
+
+    .followIconsContainer{
+      margin-left:0 ;
+    }
+    .mainTodoContainer{
+        width: 90%;
+    }
+
+    .tagsContainer{
+    height: 50px;
+  
+  }
+
+  .tagsList{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .tag{
+    text-align: center;
+    font-size: 13px;
+    font-family : "roboto";
+    padding: 2px;
+    color: #fff;
+    width: 60px;
+    border: 1px solid, green;
+    border-radius: 15px;
+  }
+
+.tag:hover{
+  font-size: 14px;
+  padding: 3px;
+  width: 70px;
+  
+}
+
+.active{
+  font-size: 14px;
+  padding: 3px;
+  width: 70px;
+  background-color: green;
+  border: 1px solid red;
+}
+
+    .tagsContainer{
+        width: 100%;
+        overflow-x: scroll;
+    }
+    .tagsList{
+      gap: 50px;
+    }
+    
+    .listItem{
+  display: flex;
+  color: #fff;
+  align-items: center;
+  justify-content: space-between;
+  width: 95%;
+  margin-left: 0;
+  padding-left: 0px;
+  height: 35px;
+  border-radius:20px;
+  padding: 8px;
+  border: 1px solid lightseagreen;
+  list-style: none;
+  margin: 10px;
+}
+
+.listItem span{
+  font-size: 10px;
+}
+
+.listItem p{
+  font-size: 8px;
+}
+    
+    .todosList{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      
+      padding-left: 10px;
+      width: 100%   ;
+    }
+
+    
+
+    
+
+.todoInput{
+    height: 30px;
+    color: #fff;
+    width: 230px;
+    margin-left: 20px;
+}
+
+.addButton{
+  position: relative;
+  left: -30px;
+    height: 30px;
+    width: 70px;
+    border-radius: 10px;
+    border: none;
+    margin-left: 10px;
+    background-color:orange;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    outline: none;
+}
+
+.addButton:hover{
+    background-color: darkorange;
+}
+  }
+
